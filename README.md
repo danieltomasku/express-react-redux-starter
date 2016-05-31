@@ -4,6 +4,7 @@ Skeleton for website using ExpressJS, isomorphic ReactJS w/ React Router and Flu
 ## Install
  - Install package `npm i`
  - Run dev server with `gulp`
+ - View site at http://localhost:3000
 
 
 ## Notes

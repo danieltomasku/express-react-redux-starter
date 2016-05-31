@@ -7,8 +7,6 @@ var bodyParser = require('body-parser');
 var basicAuth = require('basic-auth-connect');
 
 var routes = require('./routes/index');
-import AppConfig from './data/AppConfig'
-const baseUri = AppConfig.env[(process.env.NODE_ENV || 'development')].baseUri
 
 var app = express();
 
@@ -28,7 +26,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(baseUri,express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 

@@ -25,13 +25,10 @@ export function closeNavMenu() {
 
 export function getSomeAsyncData() {
   return (dispatch,getState) => {
-      dispatch(loadAysncRequest())
-      return fetch('http://urltofetchfrom.com')
-        .then(res => res.json())
-        .then(json => dispatch(loadAsyncSuccess(json)))
-    } else {
-      return Promise.resolve()
-    }
+    dispatch(loadAysncRequest())
+    return fetch('http://urltofetchfrom.com')
+      .then(res => res.json())
+      .then(json => dispatch(loadAsyncSuccess(json)))
   }
 }
 
