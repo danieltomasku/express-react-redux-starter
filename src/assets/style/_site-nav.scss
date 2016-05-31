@@ -1,0 +1,147 @@
+.nav-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.site-nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 21;
+  width: 415px;
+  max-width: 100%;
+  height: 100%;
+  background-color: magenta;
+  overflow-x: auto;
+
+  .close-nav {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    color: #ffffff;
+    font-size: 50px;
+    line-height: 60px;
+
+    @include transition(color 0.3s ease-in-out);
+  }
+  .close-nav:hover {
+    color: cyan;
+  }
+
+  .nav-links {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+
+    li {
+      height: 60px;
+    }
+
+    li.sublink {
+      height: 35px;
+    }
+
+    li.sublink:first-of-type {
+      background-color: pink;
+    }
+
+    li.link-pad {
+      margin-top: 20px;
+    }
+
+    a {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      height: 60px;
+      line-height: 60px;
+    }
+
+
+    .site-link {
+
+      span{
+        display: inline-block;
+        position: relative;
+        padding: 0 15px;
+        color: #ffffff;
+        font-size: 36px;
+        line-height: 60px;
+        font-weight: normal;
+      }
+
+      span:after {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 0%;
+        height: 3px;
+        background-color: cyan;
+        bottom: 0;
+        left: 0;
+        margin-left: 50%;
+
+        @include transition( margin-left 0.3s ease-in-out, width 0.3s ease-in-out )
+      }
+    }
+
+    .site-link:hover,
+    .site-link.active {
+      background-color: magenta;
+
+      span:after {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+
+    .subpage-link {
+      @include transition( color 0.3s ease-in-out);
+
+      line-height: 35px;
+
+      span {
+        text-transform: none;
+        font-size: 14px;
+        line-height: 35px;
+      }
+    }
+    .subpage-link:hover {
+      color: cyan;
+    }
+  }
+
+  h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: normal;
+  }
+
+  .social-links {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    a {
+      color: #ffffff;
+      font-size: 22px;
+
+      @include transition(color 0.3s ease-in-out);
+    }
+
+    a:hover {
+      color: cyan;
+    }
+  }
+
+}

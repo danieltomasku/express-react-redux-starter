@@ -1,0 +1,109 @@
+* {
+  font-family: 'Intel Clear';
+}
+html,body {
+  // overflow-x: hidden; Why was this here?
+  height: 100%;
+  background-color: blue;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: pink;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 50px 0px 20px;
+  font-size: 113px;
+  line-height: 96px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: normal;
+
+  @media (max-width: $screen-sm - 1) {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 65px;
+    line-height: 65px;
+  }
+}
+
+h2 {
+  margin: 50px 0px 25px;
+  font-size: 113px;
+  line-height: 100px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: normal;
+
+  @media (max-width: $screen-sm - 1) {
+    font-size: 85px;
+    line-height: 85px;
+  }
+}
+
+h3 {
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: normal;
+}
+
+p {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: light;
+
+  @media (max-width: $screen-sm - 1) {
+    margin-top: 10px;
+  }
+}
+
+sup {
+  font-size: 60%;
+  top: -0.75em;
+}
+
+.site-wrapper {
+  padding-top: 60px;
+  background-color: blue;
+}
+
+.container {
+  position: relative;
+}
+
+.btn, .btn:link, .btn:visited, .btn:hover, .btn:active {
+  margin-top: 30px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 35px;
+  min-width: 230px;
+  text-align: center;
+  background-color: cyan;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include transition(0.3s background-color ease-in-out, 0.3s color ease-in-out)
+
+  @media (max-width: $screen-sm - 1) {
+    line-height: 40px;
+    font-size: 18px;
+  }
+}
+
+.btn:hover {
+  background-color: pink;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#ExampleSite {
+  opacity: 0;
+}
+#ExampleSite.mounted {
+  opacity: 1;
+}

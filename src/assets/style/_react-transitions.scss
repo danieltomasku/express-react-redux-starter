@@ -1,0 +1,121 @@
+/** Site Page Fade **/
+.pagefade-enter {
+  opacity: 0;
+}
+
+.pagefade-enter.pagefade-enter-active {
+  opacity: 1;
+  @include transition( opacity 500ms ease-in-out 500ms );
+}
+
+.pagefade-leave {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  opacity: 1;
+}
+
+.pagefade-leave.pagefade-leave-active {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  opacity: 0;
+  @include transition( opacity 500ms ease-in-out );
+}
+
+.pagefade-appear {
+  opacity: 0;
+}
+.pagefade-appear.pagefade-appear-active {
+  opacity: 1;
+  @include transition( opacity 500ms ease-in-out );
+}
+
+/** General Fade **/
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  @include transition( opacity 500ms ease-in-out 500ms );
+}
+
+.fade-leave {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  @include transition( opacity 500ms ease-in-out );
+}
+
+.fade-appear {
+  opacity: 0;
+}
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  @include transition( opacity 500ms ease-in-out );
+}
+
+/** Cross Fade **/
+.crossfade-enter {
+  opacity: 0;
+}
+
+.crossfade-enter.crossfade-enter-active {
+  opacity: 1;
+  @include transition( opacity 500ms ease-in-out );
+}
+
+.crossfade-leave {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  opacity: 1;
+}
+
+.crossfade-leave.crossfade-leave-active {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  @include transition( opacity 500ms ease-in-out );
+}
+
+.crossfade-appear {
+  opacity: 0;
+}
+.crossfade-appear.crossfade-appear-active {
+  opacity: 1;
+  @include transition( opacity 500ms ease-in-out );
+}
+
+/** Nav menu **/
+.nav-left-enter {
+  @include transform(translate3d(-100%,0,0));
+}
+.nav-left-enter.nav-left-enter-active {
+  @include transform(translate3d(0%,0,0));
+  -moz-transition: -moz-transform 500ms ease-in-out;
+  -o-transition: -o-transform 500ms ease-in-out;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+}
+.nav-left-leave {
+  @include transform(translate3d(0%,0,0));
+}
+.nav-left-leave.nav-left-leave-active {
+  @include transform(translate3d(-100%,0,0));
+  -moz-transition: -moz-transform 500ms ease-in-out;
+  -o-transition: -o-transform 500ms ease-in-out;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+}
+
