@@ -1,5 +1,5 @@
 # Express - React - Redux Starter Pack
-Skeleton for website using ExpressJS, isomorphic ReactJS w/ React Router and Flux w/ Redux. Bunndling with Gulp.
+Skeleton for website using ExpressJS, isomorphic ReactJS w/ React Router and Flux w/ Redux. Bundling with Gulp.
 
 ## Install
  - Install package `npm i`
